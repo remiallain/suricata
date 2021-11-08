@@ -13,4 +13,4 @@ help: ## This help.
 # DOCKER TASKS
 # Build the container
 build: ## Build the container
-	docker build . -t rallain/suricata:alpine-$(VERSION)
+	docker build . -t remiallain/suricata:$(VERSION)
