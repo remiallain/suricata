@@ -1,4 +1,4 @@
-FROM alpine@sha256:5f82c1806d60592b747d6a53d35164b0c8f40e7ccf5425c1d59ae86ec8b3c0bc
+FROM alpine@sha256:c3d45491770c51da4ef58318e3714da686bc7165338b7ab5ac758e75c7455efb
 RUN apk update \
     && apk add suricata=4.1.4-r5 \
     && rm -rf /var/cache/apk/*
