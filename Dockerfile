@@ -1,6 +1,6 @@
-FROM alpine@sha256:5f82c1806d60592b747d6a53d35164b0c8f40e7ccf5425c1d59ae86ec8b3c0bc
+FROM alpine@sha256:a721d672be3cdaaf1285c2b60b76d81ab4a8a3cf5a7180a966f2c545305ad6de
 RUN apk update \
-    && apk add suricata=4.1.4-r5 \
+    && apk --no-cache add suricata=5.0.3-r0 \
     && rm -rf /var/cache/apk/*
 VOLUME /var/log/suricata
 VOLUME /var/lib/suricata
