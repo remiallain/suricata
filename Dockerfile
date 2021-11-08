@@ -3,9 +3,7 @@ RUN apk update \
     && apk add suricata=6.0.3-r1 \
     && apk upgrade \
     && rm -rf /var/cache/apk/*
-VOLUME /var/log/suricata
-VOLUME /var/lib/suricata
-VOLUME /etc/suricata
+VOLUME ["/var/log/suricata", "/var/lib/suricata", "/etc/suricata"]
 RUN addgroup -g 2000 suricata && \
         adduser -S -H -u 2000 -D -g 2000 suricata && \
         chown -R suricata:suricata /etc/suricata && \
